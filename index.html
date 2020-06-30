@@ -1,14 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYT Search</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NYT Search</title>
+  <!-- Bootstrap CSS CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 </head>
+
 <body>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+  <div class="container">
+    <!--Jumbotron Heading-->
+    <div class="jumbotron">
+      <h1 class="text-center">
+        <strong><i class="fa fa-newspaper-o"></i> New York Times Search</strong>
+      </h1>
+    </div>
+
+    <div class="row">
+      <!--Search-->
+      <div class="col-lg-12">
+        <br>
+        <!--Search Parameters Panel-->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Search Parameters</h3>
+          </div>
+          <div class="panel-body">
+            <form role="form">
+              <!--Search Term Input-->
+              <div class="form-group">
+                <label for="search">Search Term:</label>
+                <input type="text" class="form-control" id="search">
+              </div>
+              <!--Select Number-->
+              <div class="form-group">
+                <label for="sell">Number of Records to Retrieve:</label>
+                <select class="form-control" id="numRecords">
+                  <option value=1>1</option>
+                  <option value=5 selected>5</option>
+                  <option value=10>10</option>
+                </select>
+              </div>
+              <!--Start Year Input-->
+              <div class="form-group">
+                <label for="startYear">Start Year:</label>
+                <input type="text" class="form-control" id="startYear">
+              </div>
+              <!--End Year Input-->
+              <div class="form-group">
+                <label for="endYear">End Year:</label>
+                <input type="text" class="form-control" id="endYear">
+              </div>
+              <!--Search Button-->
+              <button type="submit" class="btn btn-default" id="searchBtn"><i class="fa fa-search"></i>Search</button>
+              <!--Clear Button-->
+              <button type="submit" class="btn btn-default" id="clearBtn"><i class="fa fa-trash"></i>Clear</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!--Results-->
+        <div class="col-lg-12">
+          <br>
+          <!--Results Panel-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <strong>
+                <h3 class="panel-title">Search Results</h3>
+              </strong>
+            </div>
+            <div class="panel-body" id="wellSection">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Region -->
+      <div class="row">
+        <div class="col-sm-12">
+
+          <!-- Line Break followed by closing -->
+          <hr>
+          <h5 class="text-center">
+            <small>Made with lots and lots of
+              <i class="fa fa-heart"></i>
+            </small>
+          </h5>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+  </div>
+
+
+  </form>
+  </div>
+  </div>
+  <!--jQuery Link-->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <!--JavaScript Link-->
+  <script src="script.js"></script>
 </body>
+
 </html>
